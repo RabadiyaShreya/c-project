@@ -1,0 +1,57 @@
+@page
+@model Exception
+@{
+    ViewData["Title"] = "Home page";
+}
+
+     <link rel="stylesheet" href="~/css/stylesheet.css" />
+    <div class="scroll">
+        <center></br></br><h3>Use exceptions</h3></center>
+        <p class="f_size">
+            Exceptions are thrown by code that encounters an error and caught by code that can correct the error. Exceptions can be thrown 
+            by the .NET runtime or by code in a program. Once an exception is thrown, it propagates up the call stack until a catch statement
+             for the exception is found.</font>
+        </p>
+
+        <p class="f_size">Exceptions are represented by classes derived from Exception. This class identifies the type of exception and 
+            contains properties that have details about the exception. Throwing an exception involves creating an instance of an 
+            exception-derived class, optionally configuring properties of the exception, and then throwing the object by using the throw 
+            keyword. For example:</p>
+
+        <p class="f_size">&nbsp;&nbsp;class CustomException : Exception</br>
+                &nbsp;&nbsp;{</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public CustomException(string message)</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</br>
+                &nbsp;&nbsp;}</br>
+            &nbsp;&nbsp;private static void TestThrow()</br>
+                &nbsp;&nbsp;{</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new CustomException("Custom exception in TestThrow()");</br>
+                &nbsp;&nbsp;}</p>
+
+        <p class="f_class">After an exception is thrown, the runtime checks the current statement to see whether it is within a try block.
+             If it is, any catch blocks associated with the try block are checked to see whether they can catch the exception. Catch blocks 
+             typically specify exception types; if the type of the catch block is the same type as the exception, or a base class of the 
+             exception, the catch block can handle the method. For example:</p>
+
+        <p class="f_class">&nbsp;&nbsp;&nbsp;try</br>
+                &nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TestThrow();</br>
+                &nbsp;&nbsp;&nbsp;}</br>
+                &nbsp;&nbsp;&nbsp;catch (CustomException ex)</br>
+                &nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Console.WriteLine(ex.ToString());</br>
+                &nbsp;&nbsp;&nbsp;}</p>
+
+
+        
+    <div data-pym-src="https://www.jdoodle.com/embed/v0/4V7o"></div>
+
+    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript">
+    </script>
+    </div>
+    
+	
+
+      
+    

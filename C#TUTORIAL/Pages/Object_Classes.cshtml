@@ -1,0 +1,42 @@
+@page
+@model Object_Classes
+@{
+    ViewData["Title"] = "Home page";
+}
+
+     <link rel="stylesheet" href="~/css/stylesheet.css" />
+    <div class="scroll">
+        <center></br></br><h3>Introduction to classes</h3></center>
+        <h5>Reference types</h5>
+        <p class="f_size">A type that is defined as a class is a reference type. At run time, when you declare a variable of a reference type, the variable contains the value null until you explicitly create an instance of the class by using the new operator, or assign it an object of a compatible type that may have been created elsewhere, as shown in the following example:
+        </p>
+        <p class="f_size">&nbsp;&nbsp;//Declaring an object of type MyClass.</br>
+                &nbsp;&nbsp;MyClass mc = new MyClass();</br>
+                &nbsp;&nbsp;//Declaring another object of the same type, assigning it the value of the first object.</br>
+                &nbsp;&nbsp;MyClass mc2 = mc;</p>
+
+        <h5>Declaring Classes</h5>
+        <p class="f_size">&nbsp;&nbsp;Classes are declared by using the class keyword followed by a unique identifier, as shown in the following example:</p>
+        <p class="f_size">&nbsp;&nbsp;//[access modifier] - [class] - [identifier]</br>
+                &nbsp;&nbsp;public class Customer</br>
+                &nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;// Fields, properties, methods and events go here...</br>
+                &nbsp;&nbsp;}</p>
+
+        <p class="f_size">The class keyword is preceded by the access level. Because public is used in this case, anyone can create instances of this class. The name of the class follows the class keyword. The name of the class must be a valid C# identifier name. The remainder of the definition is the class body, where the behavior and data are defined. Fields, properties, methods, and events on a class are collectively referred to as class members.</p>
+
+        <h5>Creating objects</h5>
+        <p class="f_size">Although they are sometimes used interchangeably, a class and an object are different things. A class defines a type of object, but it is not an object itself. An object is a concrete entity based on a class, and is sometimes referred to as an instance of a class.</p>
+        <p class="f_size">Objects can be created by using the new keyword followed by the name of the class that the object will be based on, like this:</p>
+        <p class="f_size">&nbsp;&nbsp;&nbsp;Customer object1 = new Customer();</p>
+        
+    <div data-pym-src="https://www.jdoodle.com/embed/v0/4UXW"></div>
+
+    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript">
+    </script>
+    </div>
+    
+	
+
+      
+    

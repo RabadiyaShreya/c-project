@@ -1,0 +1,40 @@
+@page
+@model Polymorphism
+@{
+    ViewData["Title"] = "Home page";
+}
+
+     <link rel="stylesheet" href="~/css/stylesheet.css" />
+    <div class="scroll">
+        <center></br></br><h3>Polymorphism</h3></center>
+        <p class="f_size">Polymorphism is often referred to as the third pillar of object-oriented programming, after encapsulation 
+            and inheritance. Polymorphism is a Greek word that means "many-shaped" and it has two distinct aspects:</p>
+
+        <p class="f_size">&nbsp;&nbsp;&nbsp;&nbsp;<b>&#x2022;</b>At run time, objects of a derived class may be treated as objects of a base class in places 
+        such as method parameters and collections or arrays. When this polymorphism occurs, the object's declared type is no longer 
+        identical to its run-time type.</p>
+
+        <p class="f_size">&nbsp;&nbsp;&nbsp;&nbsp;<b>&#x2022;</b>Base classes may define and implement virtual methods, and derived classes can override them,
+         which means they provide their own definition and implementation. At run-time, when client code calls the method, the CLR 
+         looks up the run-time type of the object, and invokes that override of the virtual method. In your source code you can call a 
+         method on a base class, and cause a derived class's version of the method to be executed.</p>
+
+         <p class="f_size">Virtual methods enable you to work with groups of related objects in a uniform way. For example, suppose you 
+            have a drawing application that enables a user to create various kinds of shapes on a drawing surface. You don't know at 
+            compile time which specific types of shapes the user will create. However, the application has to keep track of all the 
+            various types of shapes that are created, and it has to update them in response to user mouse actions. You can use 
+            polymorphism to solve this problem in two basic steps:</p>
+
+        <p class="f_size">&nbsp;&nbsp;&nbsp;&nbsp;1.Create a class hierarchy in which each specific shape class derives from a common base class.</p>
+        <p class="f_size">&nbsp;&nbsp;&nbsp;&nbsp;2.Use a virtual method to invoke the appropriate method on any derived class through a single call to the base class method.</p>
+        
+    <div data-pym-src="https://www.jdoodle.com/embed/v0/4UYc"></div>
+
+    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript">
+    </script>
+    </div>
+    
+	
+
+      
+    

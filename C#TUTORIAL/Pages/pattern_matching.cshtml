@@ -1,0 +1,38 @@
+@page
+@model pattern_matching
+@{
+    ViewData["Title"] = "Home page";
+}
+
+     <link rel="stylesheet" href="~/css/stylesheet.css" />
+    <div class="scroll">
+        <center></br></br><h3>Pattern matching overview</h3></center>
+        <p class="f_size">
+            Pattern matching is a technique where you test an expression to determine if it has certain characteristics. 
+            C# pattern matching provides more concise syntax for testing expressions and taking action when an expression matches. 
+            The "is expression" supports pattern matching to test an expression and conditionally declare a new variable to the result 
+            of that expression. The "switch expression" enables you to perform actions based on the first matching pattern for an 
+            expression. These two expressions support a rich vocabulary of patterns.
+        </p>
+
+        <h5>Null checks</h5>
+        <p class="f_size">One of the most common scenarios for pattern matching is to ensure values aren't null. You can test and convert a nullable value type to its underlying type while testing for null using the following.</p>
+        <p class="f_size"> <b>&#x2022;</b>Eample1:</p>
+        <p class="f_size">int? maybe = 12;</br>
+                &nbsp;&nbsp;if (maybe is int number)</br>
+                &nbsp;&nbsp;{</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine($"The nullable int 'maybe' has the value {number}");</br>
+                &nbsp;&nbsp;}</br>
+                &nbsp;&nbsp;else</br>
+                &nbsp;&nbsp;{</br>
+                   &nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("The nullable int 'maybe' doesn't hold a value");</br>
+                &nbsp;&nbsp;}</p>
+
+        <p class="f_size"><b>&#x2022;</b>Example2:</p>
+        <p class="f_size">string? message = "This is not the null string";</br>
+                &nbsp;&nbsp;if (message is not null)</br>
+                &nbsp;&nbsp;{</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(message);</br>
+                &nbsp;&nbsp;}</p>
+        
+    </div>

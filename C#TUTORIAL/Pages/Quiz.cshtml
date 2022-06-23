@@ -1,0 +1,206 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+ <link rel="stylesheet" href="~/css/quizdesign.css" /> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+<body>
+   <div class="quiz_page">
+     <div class="panel"> 
+        <div class="result">
+  
+        </div>
+        <div class="question-container" id="question">
+             
+        </div>
+        <div class="option-container">
+            <button class="option" onclick="" id="op1" >op1</button>
+      
+            <button class="option" id="op2" >op2</button>
+      
+            <button class="option" id="op3">op3</button>
+      
+            <button class="option" id="op4">op4</button>
+        </div>
+        <div class="navigation">
+            <button class="evaluate">Evaluate</button>
+            <button class="next">Next</button>
+        </div>
+    </div>
+  
+     <script>
+
+   const Questions = [{
+        id: 0,
+        q: "1. C# is a programming language, developed by ___.",
+        a: [{ text: "Sunmicrosis", isCorrect: false },
+            { text: "Oracle", isCorrect: false },
+            { text: "Microsoft", isCorrect: true },
+            { text: "GNU", isCorrect: false }
+        ]
+  
+    },
+    {
+        id: 1,
+        q: "2. C# runs on the ___.",
+        a: [{ text: "Java Virtual Machine", isCorrect: false, isSelected: false },
+            { text: "Java Runtime Environment", isCorrect: false },
+            { text: "Both A. and B.", isCorrect: false },
+            { text: ".NET Framework", isCorrect: true }
+        ]
+  
+    },
+    {
+        id: 2,
+        q: "3. Who is the founder of C# programming language?",
+        a: [{ text: "Douglas Crockford", isCorrect: false },
+            { text: "Douglas Crockford", isCorrect: false },
+            { text: "Anders Hejlsberg", isCorrect: true },
+            { text: "Brendan Eich", isCorrect: false }
+        ]
+  
+    },
+    {
+        id: 3,
+        q: "4. What is the extension of a C# language file?",
+        a: [{ text: ".cpp", isCorrect: false },
+            { text: ".c", isCorrect: false },
+            { text: ".cs", isCorrect: true },
+            { text: ".csp", isCorrect: false }
+        ]
+  
+    },
+     {
+        id: 4,
+        q: "5. 10. CLR stands for ___.",
+        a: [{ text: "Common Type System", isCorrect: false },
+            { text: "Common Language Specification", isCorrect: false },
+            { text: "Common Language Runtime", isCorrect: true },
+            { text: "Java Virtual Machine", isCorrect: false }
+        ]
+  
+    }
+
+  
+]
+  
+// Set start
+var start = true;
+  
+// Iterate
+function iterate(id) {
+  
+    // Getting the result display section
+    var result = document.getElementsByClassName("result");
+    result[0].innerText = "";
+  
+    // Getting the question
+    const question = document.getElementById("question");
+  
+  
+    // Setting the question text
+    question.innerText = Questions[id].q;
+  
+    // Getting the options
+    const op1 = document.getElementById('op1');
+    const op2 = document.getElementById('op2');
+    const op3 = document.getElementById('op3');
+    const op4 = document.getElementById('op4');
+  
+  
+    // Providing option text 
+    op1.innerText = Questions[id].a[0].text;
+    op2.innerText = Questions[id].a[1].text;
+    op3.innerText = Questions[id].a[2].text;
+    op4.innerText = Questions[id].a[3].text;
+  
+    // Providing the true or false value to the options
+    op1.value = Questions[id].a[0].isCorrect;
+    op2.value = Questions[id].a[1].isCorrect;
+    op3.value = Questions[id].a[2].isCorrect;
+    op4.value = Questions[id].a[3].isCorrect;
+  
+    var selected = "";
+  
+    // Show selection for op1
+    op1.addEventListener("click", () => {
+        op1.style.backgroundColor = "#218eb8";
+        op2.style.backgroundColor = "lightskyblue";
+        op3.style.backgroundColor = "lightskyblue";
+        op4.style.backgroundColor = "lightskyblue";
+        selected = op1.value;
+    })
+  
+    // Show selection for op2
+    op2.addEventListener("click", () => {
+        op1.style.backgroundColor = "lightskyblue";
+        op2.style.backgroundColor = "#218eb8";
+        op3.style.backgroundColor = "lightskyblue";
+        op4.style.backgroundColor = "lightskyblue";
+        selected = op2.value;
+    })
+  
+    // Show selection for op3
+    op3.addEventListener("click", () => {
+        op1.style.backgroundColor = "lightskyblue";
+        op2.style.backgroundColor = "lightskyblue";
+        op3.style.backgroundColor = "#218eb8";
+        op4.style.backgroundColor = "lightskyblue";
+        selected = op3.value;
+    })
+  
+    // Show selection for op4
+    op4.addEventListener("click", () => {
+        op1.style.backgroundColor = "lightskyblue";
+        op2.style.backgroundColor = "lightskyblue";
+        op3.style.backgroundColor = "lightskyblue";
+        op4.style.backgroundColor = "#218eb8";
+        selected = op4.value;
+    })
+  
+    // Grabbing the evaluate button
+    const evaluate = document.getElementsByClassName("evaluate");
+  
+    // Evaluate method
+    evaluate[0].addEventListener("click", () => {
+        if (selected == "true") {
+            result[0].innerHTML = "True";
+            result[0].style.color = "green";
+        } else {
+            result[0].innerHTML = "False";
+            result[0].style.color = "red";
+        }
+    })
+}
+  
+if (start) {
+    iterate("0");
+}
+  
+// Next button and method
+const next = document.getElementsByClassName('next')[0];
+var id = 0;
+  
+next.addEventListener("click", () => {
+    start = false;
+    if (id < 5) {
+        id++;
+        iterate(id);
+        console.log(id);
+    }
+  
+})
+  </script>  
+ </div> 
+</body>
+</html>
+ 

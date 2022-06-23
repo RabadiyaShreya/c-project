@@ -1,0 +1,31 @@
+﻿@page
+@model interface1
+@{
+    ViewData["Title"] = "Home page";
+}
+ <link rel="stylesheet" href="~/css/stylesheet.css" />
+
+
+<table border=2 width=1300px> 
+     <tr>
+         <td width=185px align="center" bgcolor="green"><a asp-area="" asp-page="/interface1" target="_self"><font color="white">Interface</font></a><br></td>
+         <td width=185px align="center" bgcolor="green"><font color="white">Polymorphysm</font></td>
+         <td width=185px align="center" bgcolor="green"><font color="white">Tuple</font></td>
+         <td width=185px align="center" bgcolor="green"><font color="white">Pattern matching</font></td>
+         <td width=185px align="center" bgcolor="green"><font color="white">naming rules</font></td>
+         <td width=185px align="center" bgcolor="green"><font color="white">Inheritance</font></td>
+         <td width=185px align="center" bgcolor="green"><font color="white">Generics</font></td>
+     </tr>
+ </table>
+<div>
+<p class="p1_face">
+    An interface contains definitions for a group of related functionalities that a non-abstract class or a struct must implement. 
+    An interface may define static methods, which must have an implementation. Beginning with C# 8.0, an interface may define a default implementation for members.
+ An interface may not declare instance data such as fields, auto-implemented properties, or property-like events.</p>
+
+<p class="p1_face">By using interfaces, you can, for example, include behavior from multiple sources in a class. That capability is important in C# because the language doesn't support multiple inheritance of classes. 
+    In addition, you must use an interface if you want to simulate inheritance for structs, because they can't actually inherit from another struct or class.
+</p>   
+ </div>    
+ 
+

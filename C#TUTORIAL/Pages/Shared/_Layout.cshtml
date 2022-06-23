@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - C_TUTORIAL</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+     <link rel="stylesheet" href="~/css/stylesheet.css" />
+
+</head>
+<body>
+    
+        
+    <div class="con">
+               <div> <img src="~/images/sky_logo.png" class="logo" />  
+                <center class="heading">C#TUTORIAL</center>
+                @* <a asp-area="" asp-page="/login" class="login">login</a><br>   *@
+                <div class="navbar-brand">
+                  <a asp-area="" asp-page="/login" > <img src="~/images/login.jpg"  class="login_img1" /></a>
+         
+                 </div>
+                  
+              <div>
+              
+               
+               
+     
+    </div>
+              </div>
+     
+  
+              @* <div> <img src="~/images/sky_logo.png" style="float: none; " alt="logo" class=login_img /></div> *@
+    </div>
+                
+ <table border=2 height="50px" width="1530px"> 
+     <tr>
+        <td width=185px align="center" class="b_color"><a class="dropbtn"><font color="white">Program Structure
+        <div class="dropdown">
+             <div class="dropdown-content">
+                <a asp-area="" asp-page="/Overview">Overview</a><br>
+                <a asp-area="" asp-page="/Main_method">Main Method</a><br>
+                <a asp-area="" asp-page="/top_level">Top-level Structure</a>
+            </div>
+        </div></font></a><br>
+        </td>   
+
+        <td width=185px align="center" class="b_color"><font color="white"><a class="dropbtn">Coding Style
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a asp-area="" asp-page="/Identifier">Identifier Name</a><br>
+                <a asp-area="" asp-page="/Conventions">Coding Conventions</a><br>
+            </div>
+        </div></font></a><br>
+        </td>  
+
+        
+        <td width=200px align="center" class="b_color"><font color="white"><a class="dropbtn">OOP Concepts 
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a asp-area="" asp-page="/Object_Classes">Object & classes</a><br>
+                <a asp-area="" asp-page="/Inheritance">Inheritance</a><br>
+                <a asp-area="" asp-page="/Polymorphism">Polymorphism</a><br>
+            </div>
+        </div></font></a><br>
+        </td>  
+
+        <td width=185px align="center" class="b_color"><font color="white"><a class="dropbtn">Functional Technique
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a asp-area="" asp-page="/pattern_matching">Pattern Matching</a><br>
+                <a asp-area="" asp-page="/Discards">Discards</a><br>
+                <a asp-area="" asp-page="/Deconstructing_tuple">Deconstructing Tuples</a><br>
+            </div>
+        </div></font></a><br>
+        </td>  
+
+        <td width=185px align="center" class="b_color"><font color="white"><a class="dropbtn" >Exception and Error
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a asp-area="" asp-page="/Error_Overview">Overview</a><br>
+                <a asp-area="" asp-page="/Exception">Using exception</a><br>
+                <a asp-area="" asp-page="/Handling">Exception Handling</a><br>
+            </div>
+        </div></font></a><br>
+        </td>  
+
+        <td width=185px align="left" class="b_color"><a class="dropbtn"><font color="white">Type System
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a asp-area="" asp-page="/Records_learn">Records</a><br>
+                <a asp-area="" asp-page="/Interface_learn">Interface</a><br>
+                <a asp-area="" asp-page="/Generic_learn">Generic</a><br>
+            </div>
+        </div></font></a><br>
+        </td>   
+        
+     </tr>
+ </table>
+              
+            </div>
+      
+    <div>
+        <main role="main" class="pb-3">
+          @RenderBody() </main>
+    </div> 
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <center><font color="skyblue" size="5px">&copy; developed by: Shreya & Tanvi</font> <a asp-area="" asp-page="/Privacy"></a>
+            </center>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

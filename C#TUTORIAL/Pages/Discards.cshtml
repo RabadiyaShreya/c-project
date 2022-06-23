@@ -1,0 +1,33 @@
+@page
+@model Discards
+@{
+    ViewData["Title"] = "Home page";
+}
+
+     <link rel="stylesheet" href="~/css/stylesheet.css" />
+    <div class="scroll">
+        <center></br></br><h3>Discards - C# Fundamentals</h3></center>
+        <p class="f_size">
+           A discard communicates intent to the compiler and others that read your code: You intended to ignore the result of an 
+           expression. You may want to ignore the result of an expression, one or more members of a tuple expression, an out parameter 
+           to a method, or the target of a pattern matching expression.
+        </p>
+
+        <p class="f_size">Discards make the intent of your code clear. A discard indicates that our code never uses the variable. 
+            They enhance its readability and maintainability.</p>
+
+        <p class="f_size">You indicate that a variable is a discard by assigning it the underscore (_) as its name. 
+            For example, the following method call returns a tuple in which the first and second values are discards. 
+            area is a previously declared variable set to the third component returned by GetCityInformation:</p>
+
+        <p class="f_size">&nbsp;&nbsp;&nbsp;&nbsp;(_, _, area) = city.GetCityInformation(cityName);</p>
+
+        <p class="f_size">you can use discards to specify unused input parameters of a lambda expression. For more information, 
+            see the Input parameters of a lambda expression section of the Lambda expressions article.</p>
+        
+    </div>
+    
+	
+
+      
+    

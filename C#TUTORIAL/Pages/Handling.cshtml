@@ -1,0 +1,80 @@
+@page
+@model Handling
+@{
+    ViewData["Title"] = "Home page";
+}
+
+     <link rel="stylesheet" href="~/css/stylesheet.css" />
+    <div class="scroll">
+        <center></br></br><h3>Exception Handling </h3></center>
+        <p class="f_size">
+            A try block is used by C# programmers to partition code that might be affected by an exception. Associated catch blocks are used 
+            to handle any resulting exceptions. A finally block contains code that is run whether or not an exception is thrown in the try 
+            block, such as releasing resources that are allocated in the try block. A try block requires one or more associated catch blocks,
+             or a finally block, or both. </p>
+
+        <p class="f_size"><b>&#x2022;</b>The following examples show a try-catch statement, a try-finally statement, and a try-catch-finally statement.</p>
+        <p class="f_size">&nbsp;&nbsp;&nbsp;try</br>
+                &nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Code to try goes here.</br>
+                &nbsp;&nbsp;&nbsp;}</br>
+                &nbsp;&nbsp;&nbsp;catch (SomeSpecificException ex)</br>
+                &nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Code to handle the exception goes here.</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Only catch exceptions that you know how to handle.</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Never catch base class System.Exception without</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// rethrowing it at the end of the catch block.</br>
+                &nbsp;&nbsp;&nbsp;}</p>
+
+        <p class="f_size"><b>&bull;</b>Try,catchand finally:</p>
+
+        <p class="f_size">&nbsp;&nbsp;&nbsp;try</br>
+                &nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Code to try goes here.</br>
+                &nbsp;&nbsp;&nbsp;}</br>
+                &nbsp;&nbsp;&nbsp;catch (SomeSpecificException ex)</br>
+                &nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Code to handle the exception goes here.</br>
+                &nbsp;&nbsp;&nbsp;}</br>
+                &nbsp;&nbsp;&nbsp;finally</br>
+                &nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Code to execute after the try (and possibly catch) blocks</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// goes here.</br>
+                &nbsp;&nbsp;&nbsp;}</p>
+
+        <h5>Catch Blocks</h5></br>
+        <p class="f_size">A catch block can specify the type of exception to catch. The type specification is called an exception filter.
+             The exception type should be derived from Exception. In general, don't specify Exception as the exception filter unless either
+              you know how to handle all exceptions that might be thrown in the try block, or you've included a throw statement at the end of
+               your catch block.</p>
+
+        <p class="f_size">Catch exceptions when the following conditions are true:</p>
+        <p class="f_size">&nbsp;&nbsp;&nbsp;&nbsp;<b>&#x2022;</b>You have a good understanding of why the exception might be thrown, and you can implement a specific recovery, 
+            such as prompting the user to enter a new file name when you catch a FileNotFoundException object.</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>&#x2022;</b>You can create and throw a new, more specific exception. </p>
+
+        <p class="f_size">&nbsp;&nbsp;&nbsp;int GetInt(int[] array, int index)</br>
+                &nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return array[index];</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch (IndexOutOfRangeException e)</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new ArgumentOutOfRangeException(</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Parameter index is out of range.", e);</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</br>
+                &nbsp;&nbsp;&nbsp;}</p>
+
+        <h5>Finally Blocks</h5></br>
+
+        <p class="f_size">A finally block enables you to clean up actions that are performed in a try block. If present, the finally block 
+            executes last, after the try block and any matched catch block. A finally block always runs, whether an exception is thrown or a 
+            catch block matching the exception type is found.</p>
+
+    </div>
+    
+	
+
+      
+    

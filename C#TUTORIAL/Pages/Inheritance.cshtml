@@ -1,0 +1,55 @@
+@page
+@model Inheritance
+@{
+    ViewData["Title"] = "Home page";
+}
+
+     <link rel="stylesheet" href="~/css/stylesheet.css" />
+    <div class="scroll">
+        <center></br></br><h3>Inheritance</h3></center>
+        <p class="f_size">
+            Inheritance, together with encapsulation and polymorphism, is one of the three primary characteristics of object-oriented 
+            programming. Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other 
+            classes. The class whose members are inherited is called the base class, and the class that inherits those members is called
+             the derived class. A derived class can have only one direct base class. However, inheritance is transitive. 
+             If ClassC is derived from ClassB, and ClassB is derived from ClassA, ClassC inherits the members declared in ClassB and 
+             ClassA. </p>
+
+        <p class="f_size">Conceptually, a derived class is a specialization of the base class. For example, if you have a base class 
+            Animal, you might have one derived class that is named Mammal and another derived class that is named Reptile. 
+            A Mammal is an Animal, and a Reptile is an Animal, but each derived class represents different specializations of 
+            the base class.</p>
+
+       <center><img src="~/images/inheritance.png" height="400px" width="500px" asp-append-version="true" /></center> 
+
+        <h5>Abstract and virtual methods</h5>
+        <p class="f_size">When a base class declares a method as virtual, a derived class can override the method with its own 
+            implementation. If a base class declares a member as abstract, that method must be overridden in any non-abstract class 
+            that directly inherits from that class. If a derived class is itself abstract, it inherits abstract members without 
+            implementing them. Abstract and virtual members are the basis for polymorphism, which is the second primary characteristic 
+            of object-oriented programming. For more information, see Polymorphism.</p>
+
+        <h5>Abstract base classes</h5>
+        <p class="f_size">You can declare a class as abstract if you want to prevent direct instantiation by using the new operator. 
+            An abstract class can be used only if a new class is derived from it. An abstract class can contain one or more method 
+            signatures that themselves are declared as abstract. These signatures specify the parameters and return value but have no 
+            implementation (method body). An abstract class doesn't have to contain abstract members; however, if a class does contain 
+            an abstract member, the class itself must be declared as abstract. Derived classes that aren't abstract themselves must 
+            provide the implementation for any abstract methods from an abstract base class.</p>
+
+        <h5>Derived class hiding of base class members</h5>
+        <p class="f_size">A derived class can hide base class members by declaring members with the same name and signature. 
+            The new modifier can be used to explicitly indicate that the member isn't intended to be an override of the base member. 
+            The use of new isn't required, but a compiler warning will be generated if new isn't used. For more information, 
+            see Versioning with the Override and New Keywords and Knowing When to Use Override and New Keywords.</p>
+
+        <div data-pym-src="https://www.jdoodle.com/embed/v0/4UY6"></div>
+
+        <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+
+    </div>
+    
+	
+
+      
+    
